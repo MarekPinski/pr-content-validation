@@ -1,0 +1,16 @@
+name: 'PR Validation'
+description: 'Validate PR'
+inputs:
+  token:
+    required: true
+    default: ${{ github.token }}
+  relese-notes-ignore-pattern:
+    required: true
+    default: '[!RL]'
+  release-notes-file:
+    required: true
+    default: 'releases.md'
+
+runs:
+  using: 'node16'
+  main: 'index.js'
