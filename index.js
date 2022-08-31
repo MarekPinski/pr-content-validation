@@ -19,7 +19,7 @@ async function run() {
     }
 
     const baseBranch = context.payload.pull_request?.base.ref
-    if (baseBranch != 'master') {
+    if (baseBranch != 'develop') {
       return
     }
 
